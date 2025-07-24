@@ -19,6 +19,23 @@ const generateTiles = () => {
   return shuffleArray(arr);
 };
 
+const LEADERBOARD_KEY = 'sliding-puzzle-leaderboard';
+
+function loadLeaderboard() {
+  try {
+    const data = localStorage.getItem(LEADERBOARD_KEY);
+    return data ? JSON.parse(data) : [];
+  } catch {
+    return [];
+  }
+}
+
+function saveLeaderboard(leaderboard) {
+  try {
+    localStorage.setItem(LEADERBOARD_KEY, JSON.stringify(leaderboard));
+  } catch {}
+}
+
 export const usePuzzleStore = create((set, get) => ({
   tiles: generateTiles(),
   moves: 0,
@@ -26,7 +43,7 @@ export const usePuzzleStore = create((set, get) => ({
   timerActive: false,
   timerInterval: null,
   isSolved: false,
-  leaderboard: [],
+  leaderboard: loadLeaderboard(),
   moveTile: (index) => set((state) => {
     const emptyIndex = state.tiles.indexOf(null);
     const validMoves = [index - 1, index + 1, index - 4, index + 4];
@@ -48,6 +65,7 @@ export const usePuzzleStore = create((set, get) => ({
         ...state.leaderboard,
         { moves: state.moves + 1, time: state.time }
       ];
+      saveLeaderboard(newLeaderboard);
     }
 
     return { tiles: newTiles, moves: state.moves + 1, isSolved: solved, leaderboard: newLeaderboard };

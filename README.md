@@ -26,7 +26,7 @@ A fun and responsive **Sliding Puzzle Game** built with **React**, **Vite**, and
 - [React](https://reactjs.org/)
 - [Vite](https://vitejs.dev/)
 - [Zustand](https://github.com/pmndrs/zustand)
-- [Tailwind CSS](https://tailwindcss.com/) *(optional for styling)*
+- [Tailwind CSS](https://tailwindcss.com/) 
 
 ---
 

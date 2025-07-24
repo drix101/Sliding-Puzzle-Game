@@ -1,13 +1,44 @@
-# React + Vite
+# 🧩 Sliding Puzzle Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A fun and responsive **Sliding Puzzle Game** built with **React**, **Vite**, and **Zustand** for state management. Rearrange shuffled tiles to form a complete image or ordered grid.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Live
 
-## Expanding the ESLint configuration
+[Click here to play the game] https://sliding-puzzle-game-q6vk.vercel.app/
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# Sliding-Puzzle-Game
+---
+
+## 🛠️ Features
+
+- 🧠 Interactive tile-based sliding puzzle
+- 🔄 Shuffle and Reset functionality
+- 📱 Fully responsive design (mobile-friendly)
+- ⚛️ Built with **React + Vite**
+- 🗂️ State managed using **Zustand**
+- 🎮 Win condition detection
+
+---
+
+## 🧰 Tech Stack
+
+- [React](https://reactjs.org/)
+- [Vite](https://vitejs.dev/)
+- [Zustand](https://github.com/pmndrs/zustand)
+- [Tailwind CSS](https://tailwindcss.com/) *(optional for styling)*
+
+---
+
+## 📦 Installation
+
+```bash
+# Clone the repo
+git clone https://github.com/your-username/sliding-puzzle-game.git
+cd sliding-puzzle-game
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
